@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "Icon_Fo4_Party_Girl.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

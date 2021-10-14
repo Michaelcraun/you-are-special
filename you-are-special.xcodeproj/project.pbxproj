@@ -7,14 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B2B715C27186C3B009FA0FC /* AttributeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2B715B27186C3B009FA0FC /* AttributeView.swift */; };
+		9B2B715E27186CDF009FA0FC /* PerkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2B715D27186CDF009FA0FC /* PerkView.swift */; };
+		9B2B716027186EDF009FA0FC /* SPECIALHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2B715F27186EDF009FA0FC /* SPECIALHeaderView.swift */; };
 		9BA5003D271850F0002CB3FC /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA5003C271850F0002CB3FC /* Tests_iOS.swift */; };
 		9BA50048271850F0002CB3FC /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA50047271850F0002CB3FC /* Tests_macOS.swift */; };
 		9BA5004A271850F0002CB3FC /* you_are_specialApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA50021271850EE002CB3FC /* you_are_specialApp.swift */; };
 		9BA5004B271850F0002CB3FC /* you_are_specialApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA50021271850EE002CB3FC /* you_are_specialApp.swift */; };
 		9BA5004C271850F0002CB3FC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA50022271850EE002CB3FC /* ContentView.swift */; };
-		9BA5004D271850F0002CB3FC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA50022271850EE002CB3FC /* ContentView.swift */; };
 		9BA5004E271850F0002CB3FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BA50023271850F0002CB3FC /* Assets.xcassets */; };
 		9BA5004F271850F0002CB3FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BA50023271850F0002CB3FC /* Assets.xcassets */; };
+		9BA5006027185233002CB3FC /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA5005F27185233002CB3FC /* Character.swift */; };
+		9BA500622718523A002CB3FC /* Perk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA500612718523A002CB3FC /* Perk.swift */; };
+		9BA50064271853B3002CB3FC /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA50063271853B3002CB3FC /* Version.swift */; };
+		9BA50066271853E5002CB3FC /* Fallout4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA50065271853E5002CB3FC /* Fallout4.swift */; };
+		9BA500692718556B002CB3FC /* Attribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA500682718556B002CB3FC /* Attribute.swift */; };
+		9BA5006A271861FC002CB3FC /* Perk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA500612718523A002CB3FC /* Perk.swift */; };
+		9BA5006B271861FC002CB3FC /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA5005F27185233002CB3FC /* Character.swift */; };
+		9BA5006C271861FC002CB3FC /* Fallout4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA50065271853E5002CB3FC /* Fallout4.swift */; };
+		9BA5006D271861FC002CB3FC /* Attribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA500682718556B002CB3FC /* Attribute.swift */; };
+		9BA5006E271861FC002CB3FC /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA50063271853B3002CB3FC /* Version.swift */; };
+		9BA5006F271861FD002CB3FC /* Perk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA500612718523A002CB3FC /* Perk.swift */; };
+		9BA50070271861FD002CB3FC /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA5005F27185233002CB3FC /* Character.swift */; };
+		9BA50071271861FD002CB3FC /* Fallout4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA50065271853E5002CB3FC /* Fallout4.swift */; };
+		9BA50072271861FD002CB3FC /* Attribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA500682718556B002CB3FC /* Attribute.swift */; };
+		9BA50073271861FD002CB3FC /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA50063271853B3002CB3FC /* Version.swift */; };
+		9BA50074271861FD002CB3FC /* Perk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA500612718523A002CB3FC /* Perk.swift */; };
+		9BA50075271861FD002CB3FC /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA5005F27185233002CB3FC /* Character.swift */; };
+		9BA50076271861FD002CB3FC /* Fallout4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA50065271853E5002CB3FC /* Fallout4.swift */; };
+		9BA50077271861FD002CB3FC /* Attribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA500682718556B002CB3FC /* Attribute.swift */; };
+		9BA50078271861FD002CB3FC /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA50063271853B3002CB3FC /* Version.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +57,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9B2B715B27186C3B009FA0FC /* AttributeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributeView.swift; sourceTree = "<group>"; };
+		9B2B715D27186CDF009FA0FC /* PerkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerkView.swift; sourceTree = "<group>"; };
+		9B2B715F27186EDF009FA0FC /* SPECIALHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPECIALHeaderView.swift; sourceTree = "<group>"; };
 		9BA50021271850EE002CB3FC /* you_are_specialApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = you_are_specialApp.swift; sourceTree = "<group>"; };
 		9BA50022271850EE002CB3FC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9BA50023271850F0002CB3FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +74,11 @@
 		9BA50043271850F0002CB3FC /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BA50047271850F0002CB3FC /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		9BA50049271850F0002CB3FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9BA5005F27185233002CB3FC /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		9BA500612718523A002CB3FC /* Perk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Perk.swift; sourceTree = "<group>"; };
+		9BA50063271853B3002CB3FC /* Version.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Version.swift; sourceTree = "<group>"; };
+		9BA50065271853E5002CB3FC /* Fallout4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fallout4.swift; sourceTree = "<group>"; };
+		9BA500682718556B002CB3FC /* Attribute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attribute.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +113,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9B2B715A27186C30009FA0FC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9B2B715B27186C3B009FA0FC /* AttributeView.swift */,
+				9BA50022271850EE002CB3FC /* ContentView.swift */,
+				9B2B715F27186EDF009FA0FC /* SPECIALHeaderView.swift */,
+				9B2B715D27186CDF009FA0FC /* PerkView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		9BA5001B271850EE002CB3FC = {
 			isa = PBXGroup;
 			children = (
@@ -98,8 +139,9 @@
 		9BA50020271850EE002CB3FC /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				9B2B715A27186C30009FA0FC /* View */,
+				9BA5005E2718521F002CB3FC /* Model */,
 				9BA50021271850EE002CB3FC /* you_are_specialApp.swift */,
-				9BA50022271850EE002CB3FC /* ContentView.swift */,
 				9BA50023271850F0002CB3FC /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -149,6 +191,26 @@
 				9BA50049271850F0002CB3FC /* Info.plist */,
 			);
 			path = "Tests macOS";
+			sourceTree = "<group>";
+		};
+		9BA5005E2718521F002CB3FC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9BA500672718540B002CB3FC /* Version */,
+				9BA500682718556B002CB3FC /* Attribute.swift */,
+				9BA5005F27185233002CB3FC /* Character.swift */,
+				9BA500612718523A002CB3FC /* Perk.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9BA500672718540B002CB3FC /* Version */ = {
+			isa = PBXGroup;
+			children = (
+				9BA50065271853E5002CB3FC /* Fallout4.swift */,
+				9BA50063271853B3002CB3FC /* Version.swift */,
+			);
+			path = Version;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -308,8 +370,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BA50066271853E5002CB3FC /* Fallout4.swift in Sources */,
+				9BA5006027185233002CB3FC /* Character.swift in Sources */,
+				9BA50064271853B3002CB3FC /* Version.swift in Sources */,
 				9BA5004C271850F0002CB3FC /* ContentView.swift in Sources */,
+				9BA500692718556B002CB3FC /* Attribute.swift in Sources */,
+				9B2B715C27186C3B009FA0FC /* AttributeView.swift in Sources */,
+				9B2B715E27186CDF009FA0FC /* PerkView.swift in Sources */,
+				9B2B716027186EDF009FA0FC /* SPECIALHeaderView.swift in Sources */,
 				9BA5004A271850F0002CB3FC /* you_are_specialApp.swift in Sources */,
+				9BA500622718523A002CB3FC /* Perk.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,8 +387,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9BA5004D271850F0002CB3FC /* ContentView.swift in Sources */,
+				9BA5006D271861FC002CB3FC /* Attribute.swift in Sources */,
+				9BA5006C271861FC002CB3FC /* Fallout4.swift in Sources */,
 				9BA5004B271850F0002CB3FC /* you_are_specialApp.swift in Sources */,
+				9BA5006E271861FC002CB3FC /* Version.swift in Sources */,
+				9BA5006A271861FC002CB3FC /* Perk.swift in Sources */,
+				9BA5006B271861FC002CB3FC /* Character.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,7 +400,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BA50072271861FD002CB3FC /* Attribute.swift in Sources */,
+				9BA50071271861FD002CB3FC /* Fallout4.swift in Sources */,
+				9BA50070271861FD002CB3FC /* Character.swift in Sources */,
 				9BA5003D271850F0002CB3FC /* Tests_iOS.swift in Sources */,
+				9BA50073271861FD002CB3FC /* Version.swift in Sources */,
+				9BA5006F271861FD002CB3FC /* Perk.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,7 +413,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BA50077271861FD002CB3FC /* Attribute.swift in Sources */,
+				9BA50076271861FD002CB3FC /* Fallout4.swift in Sources */,
+				9BA50075271861FD002CB3FC /* Character.swift in Sources */,
 				9BA50048271850F0002CB3FC /* Tests_macOS.swift in Sources */,
+				9BA50078271861FD002CB3FC /* Version.swift in Sources */,
+				9BA50074271861FD002CB3FC /* Perk.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
