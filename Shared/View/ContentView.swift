@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State var perkChart = Fallout4.game.version.perkChart()
+    @StateObject private var viewModel = MainViewModel()
     
     var body: some View {
         
@@ -19,13 +19,15 @@ struct ContentView: View {
             
             HStack {
                 
-                ForEach(perkChart, id: \.attribute.name) { attributeList in
+                ForEach(viewModel.perkChart, id: \.attribute.name) { attributeList in
                     
                     VStack {
                         
                         Image(attributeList.attribute.image)
                             .resizable()
                             .scaledToFit()
+                            .frame(maxWidth: 35, maxHeight: 35)
+                            .clipped()
                             .onTapGesture {
                                 // Show dialog for attribute
                             }
@@ -35,11 +37,14 @@ struct ContentView: View {
                             Image(perk.image)
                                 .resizable()
                                 .scaledToFit()
+                                .frame(maxWidth: 35, maxHeight: 35)
                                 .onTapGesture {
                                     // Show dialog for perk
                                 }
                             
                         }
+                        
+                        Spacer()
                         
                     }
                     
@@ -49,6 +54,10 @@ struct ContentView: View {
             
             Spacer()
             
+        }
+        .padding()
+        .task {
+//            await viewModel.setup()
         }
         
     }

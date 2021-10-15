@@ -24,7 +24,7 @@ class Version: Codable {
         self.perks = perks
     }
     
-    private func attributes() -> [Attribute] {
+    func attributes() -> [Attribute] {
         perks.compactMap({ $0 as? Attribute })
     }
     
@@ -52,5 +52,10 @@ class Version: Codable {
     func perksFor(special: SPECIAL) -> [Perk] {
         perks.filter({ $0.special == special })
     }
-    
+}
+
+extension Version: Equatable {
+    static func == (lhs: Version, rhs: Version) -> Bool {
+        return lhs.id == rhs.id
+    }
 }

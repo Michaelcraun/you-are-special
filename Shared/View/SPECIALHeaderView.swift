@@ -24,7 +24,8 @@ struct SPECIALHeaderView: View {
                 ForEach(special, id: \.self) { char in
                     
                     Text(char)
-                        .frame(minWidth: 45)
+                        .font(.largeTitle)
+                        .frame(maxWidth: 35, maxHeight: 35)
                     
                     Spacer()
                     

@@ -5,6 +5,7 @@
 //  Created by Michael Craun on 10/14/21.
 //
 
+import Firebase
 import SwiftUI
 
 @main
@@ -13,5 +14,9 @@ struct you_are_specialApp: App {
         WindowGroup {
             ContentView()
         }
+    }
+    
+    init() {
+        FirebaseApp.configure()
     }
 }
