@@ -10,6 +10,7 @@ import Foundation
 class Version: Codable {
     typealias AttributeList = (attribute: Attribute, perks: [Perk])
     
+    var attributes: [Attribute] = []
     var id: String
     var name: String
     var perks: [Perk] = []
@@ -24,10 +25,6 @@ class Version: Codable {
         self.perks = perks
     }
     
-    func attributes() -> [Attribute] {
-        perks.compactMap({ $0 as? Attribute })
-    }
-    
     func perkChart() -> [AttributeList] {
         let strengthPerks = perksFor(special: .strength)
         let perceptionPerks = perksFor(special: .perception)
@@ -38,13 +35,13 @@ class Version: Codable {
         let luckPerks = perksFor(special: .luck)
         
         var chart: [(Attribute, [Perk])] = []
-        chart.append((attributes()[.strength], strengthPerks))
-        chart.append((attributes()[.perception], perceptionPerks))
-        chart.append((attributes()[.endurance], endurancePerks))
-        chart.append((attributes()[.charisma], charismaPerks))
-        chart.append((attributes()[.intelligence], intelligencePerks))
-        chart.append((attributes()[.agility], agilityPerks))
-        chart.append((attributes()[.luck], luckPerks))
+        chart.append((attributes[.strength], strengthPerks))
+        chart.append((attributes[.perception], perceptionPerks))
+        chart.append((attributes[.endurance], endurancePerks))
+        chart.append((attributes[.charisma], charismaPerks))
+        chart.append((attributes[.intelligence], intelligencePerks))
+        chart.append((attributes[.agility], agilityPerks))
+        chart.append((attributes[.luck], luckPerks))
         
         return chart
     }

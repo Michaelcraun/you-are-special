@@ -21,31 +21,12 @@ struct Firebase {
     
     private var storage: StorageReference { Storage.storage().reference() }
     var perkStorage: StorageReference { storage.child("perk") }
+    var versionStorage: StorageReference { storage.child("version") }
     
     func authenticate() async -> Result<User,Error> {
         do {
             let result = try await Auth.auth().signInAnonymously()
             return .success(result.user)
-        } catch {
-            return .failure(error)
-        }
-    }
-    
-    func perksForVersionWith(id: String) async -> Result<[Perk],Error> {
-        do {
-            let version = versionCollection.document(id)
-            let attributeQuery = attributeCollection
-                .whereField("version", isEqualTo: version)
-            let perkQuery = perkCollection
-                .whereField("version", isEqualTo: version)
-            
-            let attributeResult = try await attributeQuery.getDocuments()
-            let perkResult = try await perkQuery.getDocuments()
-            
-            let attributes = attributeResult.documents.compactMap{ try? $0.data(as: Attribute.self) }
-            let perks = perkResult.documents.compactMap { try? $0.data(as: Perk.self) }
-            
-            return .success(attributes + perks)
         } catch {
             return .failure(error)
         }

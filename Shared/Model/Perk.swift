@@ -8,31 +8,19 @@
 import Foundation
 
 class Perk: Codable {
-    var special: SPECIAL?
-    var maxRank: Int
-    var name: String
-    var progression: [Progression]?
-    var version: Version
+    let maxRank: Int
+    let name: String
+    let progression: [Progression]?
+    var requiredSpecial: Int
+    let special: SPECIAL
     
-    // Example: "fo4_strength"
-    var attribute: Attribute? {
-        if let special = special {
-            return version.perks.compactMap({ $0 as? Attribute })[special]
-        }
-        return nil
-    }
-    var image: String { "\(version.id)_\(name)".lowercased() }
-    var rank: Int = 0
-    var requiredSpecial: Int = 0
+    var rank: Int?
     
-    init(name: String, version: Version, maxRank: Int) {
+    var image: String { name.lowercased() }
+    
+    init(special: SPECIAL, requiredSpecial: Int, name: String, version: Version, maxRank: Int, progression: [Progression]) {
         self.maxRank = maxRank
         self.name = name
-        self.version = version
-    }
-    
-    convenience init(special: SPECIAL, requiredSpecial: Int, name: String, version: Version, maxRank: Int, progression: [Progression]) {
-        self.init(name: name, version: version, maxRank: maxRank)
         self.progression = progression
         self.requiredSpecial = requiredSpecial
         self.special = special

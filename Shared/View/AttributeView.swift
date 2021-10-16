@@ -11,20 +11,30 @@ struct AttributeView: View {
     let attribute: Attribute
     
     var body: some View {
+        
         VStack {
+            
+            Text(String(attribute.name.first!))
+                .font(.largeTitle)
+                .frame(minWidth: 35, minHeight: 35)
             
             Image(attribute.image)
                 .resizable()
                 .scaledToFit()
-            
-            Text(attribute.name)
+                .frame(minWidth: 35, minHeight: 35)
+                .onTapGesture {
+                    // Show dialog for attribute
+                }
             
         }
+        .frame(alignment: .center)
+        
     }
+    
 }
 
 struct AttributeView_Previews: PreviewProvider {
     static var previews: some View {
-        AttributeView(attribute: Attribute(name: "Strength", version: Fallout4.game.version, maxRank: 10))
+        AttributeView(attribute: Attribute(name: "Strength", maxRank: 10))
     }
 }

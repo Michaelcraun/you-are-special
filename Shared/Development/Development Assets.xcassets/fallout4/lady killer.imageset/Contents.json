@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "lady killer.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

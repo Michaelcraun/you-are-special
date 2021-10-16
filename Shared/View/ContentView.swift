@@ -13,54 +13,43 @@ struct ContentView: View {
     
     var body: some View {
         
-        VStack(spacing: 0) {
+        NavigationView {
             
-            SPECIALHeaderView()
-            
-            HStack {
+            VStack(spacing: 0) {
                 
-                ForEach(viewModel.perkChart, id: \.attribute.name) { attributeList in
-                    
-                    VStack {
-                        
-                        Image(attributeList.attribute.image)
-                            .resizable()
-                            .scaledToFit()
-                            .frame(maxWidth: 35, maxHeight: 35)
-                            .clipped()
-                            .onTapGesture {
-                                // Show dialog for attribute
-                            }
-                        
-                        ForEach(attributeList.perks, id: \.name) { perk in
-                            
-                            Image(perk.image)
-                                .resizable()
-                                .scaledToFit()
-                                .frame(maxWidth: 35, maxHeight: 35)
-                                .onTapGesture {
-                                    // Show dialog for perk
-                                }
-                            
-                        }
-                        
-                        Spacer()
-                        
-                    }
-                    
-                }
+                PerkChartView(chart: viewModel.perkChart)
+                
+                Spacer()
                 
             }
+            .padding()
+            .sheet(isPresented: $viewModel.isPickingDocumentForImport) {
+                DocumentPicker { location in
+                    viewModel.importFileAt(location: location)
+                }
+            }
+            .navigationBarItems(
+                leading: HStack {
+                    
+                },
+                trailing: HStack {
+                    #if DEBUG
+                    Button {
+                        viewModel.isPickingDocumentForImport.toggle()
+                    } label: {
+                        Image(systemName: "square.and.arrow.down")
+                    }
+                    #endif
+                })
+            .navigationTitle("YOU ARE...")
+            .task {
+    //            await viewModel.setup()
+            }
             
-            Spacer()
-            
-        }
-        .padding()
-        .task {
-//            await viewModel.setup()
         }
         
     }
+    
 }
 
 struct ContentView_Previews: PreviewProvider {

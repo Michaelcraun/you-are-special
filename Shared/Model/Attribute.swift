@@ -7,17 +7,28 @@
 
 import Foundation
 
-class Attribute: Perk {
+class Attribute: Codable {
+    let maxRank: Int
+    let name: String
     
+    var rank: Int?
+    
+    var image: String { name.lowercased() }
+    
+    init(name: String, maxRank: Int) {
+        self.maxRank = maxRank
+        self.name = name
+    }
 }
 
 extension Array where Element == Attribute {
     subscript(_ special: SPECIAL) -> Attribute {
+        print(special, self)
         return first(where: { $0.name.lowercased() == special.rawValue })!
     }
 }
 
-enum SPECIAL: String, Codable {
+enum SPECIAL: String, CaseIterable, Codable {
     case strength
     case perception
     case endurance

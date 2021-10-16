@@ -10,12 +10,25 @@ import Foundation
 struct Importer {
     static let service = Importer()
     
-    private let special = ["Strength", "Perception", "Endurance", "Intelligence", "Agility", "Luck"]
+    private let special = SPECIAL.allCases.map({ $0.rawValue })
     
     func readFileAt(location: URL) throws -> Version {
+        let string = try String(contentsOf: location)
+        print("Importer", #function, string)
         let data = try Data(contentsOf: location)
         let version = try JSONDecoder().decode(Version.self, from: data)
         return version
+    }
+    
+    func uploadVersionAt(location: URL) throws {
+        let fileName = location.lastPathComponent
+        let data = try Data(contentsOf: location)
+        Firebase.service.versionStorage.child(fileName).putData(data, metadata: nil) { _, error in
+            if let error = error {
+                print("Importer", #function, error.localizedDescription)
+                // TODO: Better error handling
+            }
+        }
     }
     
     /**
@@ -29,25 +42,23 @@ struct Importer {
      * 6. Each perk progression (when sorted by rank) has a linear progression for their requiredLevel property
      */
     func validate(version: Version) throws {
-        let attributes = version.attributes()
-        
         // Verify the version has exactly 7 attributes contained within
-        guard attributes.count == 7 else { throw ImporterError.invalidAttributeCount }
+        guard version.attributes.count == 7 else { throw ImporterError.invalidAttributeCount(version.attributes.count) }
         
         // Verify that the versions' attributes contain all SPECIAL attributes
-        guard attributes.map({ $0.name }).contains(all: special) else {
-            let missing = special.filter({ attributes.map({ $0.name }).contains($0) })
+        guard version.attributes.map({ $0.name.lowercased() }).contains(all: special) else {
+            let missing = special.filter({ version.attributes.map({ $0.name }).contains($0) })
             let missingSPECIAL = missing.compactMap({ SPECIAL(rawValue: $0) })
             throw ImporterError.missingSPECIAL(missingSPECIAL)
         }
         
         // Verify each attribute's perks
-        for attribute in attributes {
+        for attribute in version.attributes {
             guard let special = SPECIAL(rawValue: attribute.name.lowercased()) else { return }
             let perks = version.perksFor(special: special)
             
             // Verify that the number of perks is equal to this attribute's maxRanks
-            guard perks.count == attribute.maxRank else { throw ImporterError.invalidPerkCountFor(special) }
+            guard perks.count == attribute.maxRank else { throw ImporterError.invalidPerkCountFor(special, perks.count, attribute.maxRank) }
             
             // Verify that the perks follow a linear progression through this attribute's possible ranks
             let perksSortedByRequredSpecial = perks.sorted(by: { $0.requiredSpecial < $1.requiredSpecial })
@@ -61,13 +72,13 @@ struct Importer {
                 guard let progression = perk.progression else { throw ImporterError.missingPerkProgressionFor(perk) }
                 
                 // Verify that the perk's progression has the same number of items as the perk has availabel ranks
-                guard progression.count == perk.maxRank else { throw ImporterError.invalidPerkProgressionCountFor(perk) }
+                guard progression.count == perk.maxRank else { throw ImporterError.invalidPerkProgressionCountFor(perk, progression.count, perk.maxRank) }
                 
                 // Verify linear progression of progression ranks
                 let sortedProgression = progression.sorted(by: { $0.rank < $1.rank })
                 let progressionRanks = sortedProgression.map({ $0.rank })
                 let expectedRanks = Array(1...perk.maxRank)
-                guard progressionRanks == expectedRanks else { throw ImporterError.invalidPerkProgressionRanksFor(perk, progressionRanks) }
+                guard progressionRanks == expectedRanks else { throw ImporterError.invalidPerkProgressionRanksFor(perk, progressionRanks, expectedRanks) }
                 
                 // Verify linear progression of progression required levels
                 let requiredLevels = sortedProgression.map({ $0.requiredLevel })
@@ -79,12 +90,33 @@ struct Importer {
 }
 
 enum ImporterError: Error {
-    case invalidAttributeCount
-    case invalidPerkCountFor(SPECIAL)
+    case invalidAttributeCount(Int)
+    case invalidPerkCountFor(SPECIAL, Int, Int)
     case invalidPerkLevelProgressionFor(Perk, [Int])
     case invalidPerkProgressionFor(SPECIAL, [Int])
-    case invalidPerkProgressionCountFor(Perk)
+    case invalidPerkProgressionCountFor(Perk, Int, Int)
     case missingPerkProgressionFor(Perk)
-    case invalidPerkProgressionRanksFor(Perk, [Int])
+    case invalidPerkProgressionRanksFor(Perk, [Int], [Int])
     case missingSPECIAL([SPECIAL])
+    
+    var localizedDescription: String {
+        switch self {
+        case .invalidAttributeCount(let count):
+            return "The imported document contains \(count) attributes, but expected 7"
+        case .invalidPerkCountFor(let special, let actual, let expected):
+            return "The imported document contains \(actual) \(special) perks, but \(expected) were expected"
+        case .invalidPerkLevelProgressionFor(let perk, let progression):
+            return "The imported document's \(perk.name) perk contains an invalid level progression (\(progression))"
+        case .invalidPerkProgressionFor(let special, let progression):
+            return "The imported document's \(special) attribute contains an invalid perk progression (\(progression))"
+        case .invalidPerkProgressionCountFor(let perk, let actual, let expected):
+            return "The imported document's \(perk.name) perk contains \(actual) progression levels, but \(expected) were expected"
+        case .missingPerkProgressionFor(let perk):
+            return "The imported document does not contain a progression chart for the \(perk.name) perk"
+        case .invalidPerkProgressionRanksFor(let perk, let actual, let expected):
+            return "The imported document's \(perk.name) perk progression chart contains perks for levels \(actual), but \(expected) was expected"
+        case .missingSPECIAL(let missing):
+            return "The imported document is missing the following SPECIAL attributes: \(missing)"
+        }
+    }
 }

@@ -11,13 +11,15 @@ struct PerkView: View {
     let perk: Perk
     
     var body: some View {
-        VStack {
-            
-            Image(perk.image)
-            
-            Text(perk.name)
-            
-        }
+        
+        Image(perk.image)
+            .resizable()
+            .scaledToFit()
+            .frame(minWidth: 35, minHeight: 35)
+            .onTapGesture {
+                // show dialog for perk
+            }
+        
     }
 }
 
