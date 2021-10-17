@@ -43,7 +43,7 @@ struct ContentView: View {
                 })
             .navigationTitle("YOU ARE...")
             .task {
-    //            await viewModel.setup()
+                await viewModel.setup()
             }
             
         }

@@ -13,17 +13,27 @@ class Perk: Codable {
     let progression: [Progression]?
     var requiredSpecial: Int
     let special: SPECIAL
+    let version: String
     
     var rank: Int?
     
-    var image: String { name.lowercased() }
+    var imagePaths: [String] {
+        if name.contains("/") {
+            let perkNames = name.components(separatedBy: "/")
+            return perkNames.map { "\(version)/\($0.lowercased())" }
+        } else {
+            return ["\(version)/\(name.lowercased())"]
+        }
+    }
+    var localImageName: String { name.lowercased() }
     
-    init(special: SPECIAL, requiredSpecial: Int, name: String, version: Version, maxRank: Int, progression: [Progression]) {
+    init(special: SPECIAL, requiredSpecial: Int, name: String, version: String, maxRank: Int, progression: [Progression]) {
         self.maxRank = maxRank
         self.name = name
         self.progression = progression
         self.requiredSpecial = requiredSpecial
         self.special = special
+        self.version = version
     }
 }
 

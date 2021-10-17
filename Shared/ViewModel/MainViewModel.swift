@@ -17,6 +17,17 @@ class MainViewModel: ObservableObject {
     @Published var isPickingDocumentForImport = false
     @Published var isPresentingMenu = false
     
+    private func addFetched(version: Version) {
+        DispatchQueue.main.async {
+            self.version = version
+            self.perkChart = version.perkChart()
+            
+            if !self.versions.contains(version) {
+                self.versions.append(version)
+            }
+        }
+    }
+    
     func importFileAt(location: URL?) {
         do {
             guard let location = location else { return }
@@ -26,10 +37,22 @@ class MainViewModel: ObservableObject {
         } catch {
             // TODO: Better error handling
             guard let error = error as? ImporterError else {
-                print("MainViewModel", #function, "unkown error occurred: [\(error.localizedDescription)]")
+                print("MainViewModel", #function, "unkown error occurred [\(error.localizedDescription)]")
                 return
             }
             print("MainViewModel", #function, error.localizedDescription)
+        }
+    }
+    
+    func setup() async {
+        let versionID = DataService.shared.getValueFor(key: .version) ?? "fo4"
+        let result = await Firebase.service.versionWith(id: versionID)
+        switch result {
+        case .failure(let error):
+            print("MainViewModel", #function, error.localizedDescription)
+            // TODO: Better error handling
+        case .success(let version):
+            addFetched(version: version)
         }
     }
 }

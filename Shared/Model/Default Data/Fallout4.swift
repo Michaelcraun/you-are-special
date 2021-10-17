@@ -12,13 +12,13 @@ struct Fallout4 {
     
     var version: Version
     private var attributes: [Attribute] {
-        [Attribute(name: "Strength", maxRank: 10),
-         Attribute(name: "Perception", maxRank: 10),
-         Attribute(name: "Endurance", maxRank: 10),
-         Attribute(name: "Charisma", maxRank: 10),
-         Attribute(name: "Intelligence", maxRank: 10),
-         Attribute(name: "Agility", maxRank: 10),
-         Attribute(name: "Luck", maxRank: 10)]
+        [Attribute(name: "Strength", maxRank: 10, version: "fo4"),
+         Attribute(name: "Perception", maxRank: 10, version: "fo4"),
+         Attribute(name: "Endurance", maxRank: 10, version: "fo4"),
+         Attribute(name: "Charisma", maxRank: 10, version: "fo4"),
+         Attribute(name: "Intelligence", maxRank: 10, version: "fo4"),
+         Attribute(name: "Agility", maxRank: 10, version: "fo4"),
+         Attribute(name: "Luck", maxRank: 10, version: "fo4")]
     }
     private var perks: [Perk] {
         return [
@@ -26,7 +26,7 @@ struct Fallout4 {
                 special: .agility,
                 requiredSpecial: 5,
                 name: "Action Girl",
-                version: version,
+                version: "fo4",
                 maxRank: 2,
                 progression: [
                     Perk.Progression(
@@ -42,7 +42,7 @@ struct Fallout4 {
                 special: .endurance,
                 requiredSpecial: 5,
                 name: "Aquagirl",
-                version: version,
+                version: "fo4",
                 maxRank: 2,
                 progression: [
                     Perk.Progression(
@@ -58,7 +58,7 @@ struct Fallout4 {
                 special: .charisma,
                 requiredSpecial: 5,
                 name: "Animal Friend",
-                version: version,
+                version: "fo4",
                 maxRank: 3,
                 progression: [
                     .init(
@@ -78,7 +78,7 @@ struct Fallout4 {
                 special: .charisma,
                 requiredSpecial: 7,
                 name: "Party Girl",
-                version: version,
+                version: "fo4",
                 maxRank: 3,
                 progression: [
                     .init(
@@ -98,7 +98,7 @@ struct Fallout4 {
                 special: .perception,
                 requiredSpecial: 9,
                 name: "Penetrator",
-                version: version,
+                version: "fo4",
                 maxRank: 2,
                 progression: [
                     .init(

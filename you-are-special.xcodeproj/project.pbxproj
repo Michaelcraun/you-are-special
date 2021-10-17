@@ -78,6 +78,7 @@
 		9BA50076271861FD002CB3FC /* Fallout4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA50065271853E5002CB3FC /* Fallout4.swift */; };
 		9BA50077271861FD002CB3FC /* Attribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA500682718556B002CB3FC /* Attribute.swift */; };
 		9BA50078271861FD002CB3FC /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA50063271853B3002CB3FC /* Version.swift */; };
+		9BD940F5271C7C4A00AC3D9A /* FirebaseImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD940F4271C7C4900AC3D9A /* FirebaseImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -130,6 +131,7 @@
 		9BA50063271853B3002CB3FC /* Version.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Version.swift; sourceTree = "<group>"; };
 		9BA50065271853E5002CB3FC /* Fallout4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fallout4.swift; sourceTree = "<group>"; };
 		9BA500682718556B002CB3FC /* Attribute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attribute.swift; sourceTree = "<group>"; };
+		9BD940F4271C7C4900AC3D9A /* FirebaseImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -231,6 +233,7 @@
 				9B2B715F27186EDF009FA0FC /* SPECIALHeaderView.swift */,
 				9B17D073271A627A00879F7D /* PerkChartView.swift */,
 				9B2B715D27186CDF009FA0FC /* PerkView.swift */,
+				9BD940F4271C7C4900AC3D9A /* FirebaseImage.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -502,6 +505,7 @@
 			files = (
 				9BA50066271853E5002CB3FC /* Fallout4.swift in Sources */,
 				9BA5006027185233002CB3FC /* Character.swift in Sources */,
+				9BD940F5271C7C4A00AC3D9A /* FirebaseImage.swift in Sources */,
 				9B17D06F2719AB7A00879F7D /* ArrayExtension.swift in Sources */,
 				9B17D0692719A65200879F7D /* ImportService.swift in Sources */,
 				9B17D07A271A688100879F7D /* DocumentPicker.swift in Sources */,

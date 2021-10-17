@@ -12,10 +12,12 @@ struct PerkView: View {
     
     var body: some View {
         
-        Image(perk.image)
-            .resizable()
+        FirebaseImage(paths: perk.imagePaths)
             .scaledToFit()
-            .frame(minWidth: 35, minHeight: 35)
+            .frame(minWidth: 35,
+                   maxWidth: 50,
+                   minHeight: 35,
+                   maxHeight: 50)
             .onTapGesture {
                 // show dialog for perk
             }
@@ -25,6 +27,6 @@ struct PerkView: View {
 
 struct PerkView_Previews: PreviewProvider {
     static var previews: some View {
-        PerkView(perk: Perk(special: .charisma, requiredSpecial: 4, name: "Animal Friend", version: Fallout4.game.version, maxRank: 5, progression: []))
+        PerkView(perk: Perk(special: .charisma, requiredSpecial: 4, name: "Animal Friend", version: "fo4", maxRank: 5, progression: []))
     }
 }

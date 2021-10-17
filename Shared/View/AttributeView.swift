@@ -16,12 +16,17 @@ struct AttributeView: View {
             
             Text(String(attribute.name.first!))
                 .font(.largeTitle)
-                .frame(minWidth: 35, minHeight: 35)
+                .frame(minWidth: 35,
+                       maxWidth: 50,
+                       minHeight: 35,
+                       maxHeight: 50)
             
-            Image(attribute.image)
-                .resizable()
+            FirebaseImage(paths: attribute.imagePaths)
                 .scaledToFit()
-                .frame(minWidth: 35, minHeight: 35)
+                .frame(minWidth: 35,
+                       maxWidth: 50,
+                       minHeight: 35,
+                       maxHeight: 50)
                 .onTapGesture {
                     // Show dialog for attribute
                 }
@@ -35,6 +40,9 @@ struct AttributeView: View {
 
 struct AttributeView_Previews: PreviewProvider {
     static var previews: some View {
-        AttributeView(attribute: Attribute(name: "Strength", maxRank: 10))
+        AttributeView(attribute: Attribute(
+            name: "Strength",
+            maxRank: 10,
+            version: "fo4"))
     }
 }
