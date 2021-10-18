@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct PerkChartView: View {
-    let chart: [Version.AttributeList]
+struct PerkChart: View {
+    let chart: Version.PerkChart
     
     var body: some View {
         
@@ -18,11 +18,11 @@ struct PerkChartView: View {
                 
                 VStack {
                     
-                    AttributeView(attribute: list.attribute)
+                    AttributeCell(attribute: list.attribute)
                     
                     ForEach(list.perks, id: \.name) { perk in
                         
-                        PerkView(perk: perk)
+                        PerkCell(perk: perk)
                         
                     }
                     
@@ -39,6 +39,6 @@ struct PerkChartView: View {
 
 struct PerkChartView_Previews: PreviewProvider {
     static var previews: some View {
-        PerkChartView(chart: [])
+        PerkChart(chart: [])
     }
 }

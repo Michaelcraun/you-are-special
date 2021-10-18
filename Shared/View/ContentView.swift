@@ -17,7 +17,7 @@ struct ContentView: View {
             
             VStack(spacing: 0) {
                 
-                PerkChartView(chart: viewModel.perkChart)
+                PerkChart(chart: viewModel.perkChart)
                 
                 Spacer()
                 

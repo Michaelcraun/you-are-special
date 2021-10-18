@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct AttributeView: View {
+struct AttributeCell: View {
     let attribute: Attribute
     
     var body: some View {
@@ -38,9 +38,9 @@ struct AttributeView: View {
     
 }
 
-struct AttributeView_Previews: PreviewProvider {
+struct AttributeCell_Previews: PreviewProvider {
     static var previews: some View {
-        AttributeView(attribute: Attribute(
+        AttributeCell(attribute: Attribute(
             name: "Strength",
             maxRank: 10,
             version: "fo4"))

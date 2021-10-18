@@ -40,17 +40,16 @@
 		9B17D0702719AB7A00879F7D /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B17D06E2719AB7A00879F7D /* ArrayExtension.swift */; };
 		9B17D0712719AB7A00879F7D /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B17D06E2719AB7A00879F7D /* ArrayExtension.swift */; };
 		9B17D0722719AB7A00879F7D /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B17D06E2719AB7A00879F7D /* ArrayExtension.swift */; };
-		9B17D074271A627A00879F7D /* PerkChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B17D073271A627A00879F7D /* PerkChartView.swift */; };
-		9B17D075271A627B00879F7D /* PerkChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B17D073271A627A00879F7D /* PerkChartView.swift */; };
-		9B17D076271A627B00879F7D /* PerkChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B17D073271A627A00879F7D /* PerkChartView.swift */; };
-		9B17D077271A627B00879F7D /* PerkChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B17D073271A627A00879F7D /* PerkChartView.swift */; };
+		9B17D074271A627A00879F7D /* PerkChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B17D073271A627A00879F7D /* PerkChart.swift */; };
+		9B17D075271A627B00879F7D /* PerkChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B17D073271A627A00879F7D /* PerkChart.swift */; };
+		9B17D076271A627B00879F7D /* PerkChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B17D073271A627A00879F7D /* PerkChart.swift */; };
+		9B17D077271A627B00879F7D /* PerkChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B17D073271A627A00879F7D /* PerkChart.swift */; };
 		9B17D07A271A688100879F7D /* DocumentPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B17D079271A688100879F7D /* DocumentPicker.swift */; };
 		9B17D07B271A688100879F7D /* DocumentPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B17D079271A688100879F7D /* DocumentPicker.swift */; };
 		9B17D07C271A688100879F7D /* DocumentPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B17D079271A688100879F7D /* DocumentPicker.swift */; };
 		9B17D07D271A688100879F7D /* DocumentPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B17D079271A688100879F7D /* DocumentPicker.swift */; };
-		9B2B715C27186C3B009FA0FC /* AttributeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2B715B27186C3B009FA0FC /* AttributeView.swift */; };
-		9B2B715E27186CDF009FA0FC /* PerkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2B715D27186CDF009FA0FC /* PerkView.swift */; };
-		9B2B716027186EDF009FA0FC /* SPECIALHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2B715F27186EDF009FA0FC /* SPECIALHeaderView.swift */; };
+		9B2B715C27186C3B009FA0FC /* AttributeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2B715B27186C3B009FA0FC /* AttributeCell.swift */; };
+		9B2B715E27186CDF009FA0FC /* PerkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2B715D27186CDF009FA0FC /* PerkCell.swift */; };
 		9BA5003D271850F0002CB3FC /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA5003C271850F0002CB3FC /* Tests_iOS.swift */; };
 		9BA50048271850F0002CB3FC /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA50047271850F0002CB3FC /* Tests_macOS.swift */; };
 		9BA5004A271850F0002CB3FC /* you_are_specialApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA50021271850EE002CB3FC /* you_are_specialApp.swift */; };
@@ -106,11 +105,10 @@
 		9B17D0622718F4A900879F7D /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		9B17D0682719A65200879F7D /* ImportService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportService.swift; sourceTree = "<group>"; };
 		9B17D06E2719AB7A00879F7D /* ArrayExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
-		9B17D073271A627A00879F7D /* PerkChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerkChartView.swift; sourceTree = "<group>"; };
+		9B17D073271A627A00879F7D /* PerkChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerkChart.swift; sourceTree = "<group>"; };
 		9B17D079271A688100879F7D /* DocumentPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentPicker.swift; sourceTree = "<group>"; };
-		9B2B715B27186C3B009FA0FC /* AttributeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributeView.swift; sourceTree = "<group>"; };
-		9B2B715D27186CDF009FA0FC /* PerkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerkView.swift; sourceTree = "<group>"; };
-		9B2B715F27186EDF009FA0FC /* SPECIALHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPECIALHeaderView.swift; sourceTree = "<group>"; };
+		9B2B715B27186C3B009FA0FC /* AttributeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributeCell.swift; sourceTree = "<group>"; };
+		9B2B715D27186CDF009FA0FC /* PerkCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerkCell.swift; sourceTree = "<group>"; };
 		9B7A6751271ADB4B004D2AC8 /* you-are-special (iOS).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "you-are-special (iOS).entitlements"; sourceTree = "<group>"; };
 		9BA50021271850EE002CB3FC /* you_are_specialApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = you_are_specialApp.swift; sourceTree = "<group>"; };
 		9BA50022271850EE002CB3FC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -227,13 +225,11 @@
 		9B2B715A27186C30009FA0FC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9BD94104271DA80100AC3D9A /* Cell */,
 				9B17D078271A687400879F7D /* Representable */,
-				9B2B715B27186C3B009FA0FC /* AttributeView.swift */,
 				9BA50022271850EE002CB3FC /* ContentView.swift */,
-				9B2B715F27186EDF009FA0FC /* SPECIALHeaderView.swift */,
-				9B17D073271A627A00879F7D /* PerkChartView.swift */,
-				9B2B715D27186CDF009FA0FC /* PerkView.swift */,
 				9BD940F4271C7C4900AC3D9A /* FirebaseImage.swift */,
+				9B17D073271A627A00879F7D /* PerkChart.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -323,6 +319,15 @@
 				9BA50063271853B3002CB3FC /* Version.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		9BD94104271DA80100AC3D9A /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				9B2B715B27186C3B009FA0FC /* AttributeCell.swift */,
+				9B2B715D27186CDF009FA0FC /* PerkCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -515,10 +520,9 @@
 				9B17D0632718F4A900879F7D /* MainViewModel.swift in Sources */,
 				9BA5004C271850F0002CB3FC /* ContentView.swift in Sources */,
 				9BA500692718556B002CB3FC /* Attribute.swift in Sources */,
-				9B2B715C27186C3B009FA0FC /* AttributeView.swift in Sources */,
-				9B2B715E27186CDF009FA0FC /* PerkView.swift in Sources */,
-				9B2B716027186EDF009FA0FC /* SPECIALHeaderView.swift in Sources */,
-				9B17D074271A627A00879F7D /* PerkChartView.swift in Sources */,
+				9B2B715C27186C3B009FA0FC /* AttributeCell.swift in Sources */,
+				9B2B715E27186CDF009FA0FC /* PerkCell.swift in Sources */,
+				9B17D074271A627A00879F7D /* PerkChart.swift in Sources */,
 				9BA5004A271850F0002CB3FC /* you_are_specialApp.swift in Sources */,
 				9BA500622718523A002CB3FC /* Perk.swift in Sources */,
 			);
@@ -535,7 +539,7 @@
 				9B17D07B271A688100879F7D /* DocumentPicker.swift in Sources */,
 				9BA5004B271850F0002CB3FC /* you_are_specialApp.swift in Sources */,
 				9B17D06A2719A65200879F7D /* ImportService.swift in Sources */,
-				9B17D075271A627B00879F7D /* PerkChartView.swift in Sources */,
+				9B17D075271A627B00879F7D /* PerkChart.swift in Sources */,
 				9BA5006E271861FC002CB3FC /* Version.swift in Sources */,
 				9BA5006A271861FC002CB3FC /* Perk.swift in Sources */,
 				9BA5006B271861FC002CB3FC /* Character.swift in Sources */,
@@ -554,7 +558,7 @@
 				9B17D07C271A688100879F7D /* DocumentPicker.swift in Sources */,
 				9BA50070271861FD002CB3FC /* Character.swift in Sources */,
 				9B17D06B2719A65200879F7D /* ImportService.swift in Sources */,
-				9B17D076271A627B00879F7D /* PerkChartView.swift in Sources */,
+				9B17D076271A627B00879F7D /* PerkChart.swift in Sources */,
 				9BA5003D271850F0002CB3FC /* Tests_iOS.swift in Sources */,
 				9BA50073271861FD002CB3FC /* Version.swift in Sources */,
 				9BA5006F271861FD002CB3FC /* Perk.swift in Sources */,
@@ -573,7 +577,7 @@
 				9B17D07D271A688100879F7D /* DocumentPicker.swift in Sources */,
 				9BA50075271861FD002CB3FC /* Character.swift in Sources */,
 				9B17D06C2719A65300879F7D /* ImportService.swift in Sources */,
-				9B17D077271A627B00879F7D /* PerkChartView.swift in Sources */,
+				9B17D077271A627B00879F7D /* PerkChart.swift in Sources */,
 				9BA50048271850F0002CB3FC /* Tests_macOS.swift in Sources */,
 				9BA50078271861FD002CB3FC /* Version.swift in Sources */,
 				9BA50074271861FD002CB3FC /* Perk.swift in Sources */,

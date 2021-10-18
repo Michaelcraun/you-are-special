@@ -11,7 +11,7 @@ class MainViewModel: ObservableObject {
     // MARK: - Version
     @Published var version: Version = Fallout4.game.version
     @Published var versions: [Version] = []
-    @Published var perkChart: [Version.AttributeList] = Fallout4.game.version.perkChart()
+    @Published var perkChart: Version.PerkChart = Fallout4.game.version.perkChart()
     
     // MARK: - Presentation
     @Published var isPickingDocumentForImport = false

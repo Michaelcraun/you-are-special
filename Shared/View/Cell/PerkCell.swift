@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct PerkView: View {
+struct PerkCell: View {
     let perk: Perk
     
     var body: some View {
@@ -25,8 +25,8 @@ struct PerkView: View {
     }
 }
 
-struct PerkView_Previews: PreviewProvider {
+struct PerkCell_Previews: PreviewProvider {
     static var previews: some View {
-        PerkView(perk: Perk(special: .charisma, requiredSpecial: 4, name: "Animal Friend", version: "fo4", maxRank: 5, progression: []))
+        PerkCell(perk: Perk(special: .charisma, requiredSpecial: 4, name: "Animal Friend", version: "fo4", maxRank: 5, progression: []))
     }
 }

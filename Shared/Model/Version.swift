@@ -8,7 +8,8 @@
 import Foundation
 
 class Version: Codable {
-    typealias AttributeList = (attribute: Attribute, perks: [Perk])
+    typealias AttributePerkList = (attribute: Attribute, perks: [Perk])
+    typealias PerkChart = [AttributePerkList]
     
     var attributes: [Attribute] = []
     var id: String
@@ -25,7 +26,7 @@ class Version: Codable {
         self.perks = perks
     }
     
-    func perkChart() -> [AttributeList] {
+    func perkChart() -> PerkChart {
         let strengthPerks = perksFor(special: .strength)
         let perceptionPerks = perksFor(special: .perception)
         let endurancePerks = perksFor(special: .endurance)
