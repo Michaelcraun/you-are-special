@@ -78,6 +78,22 @@
 		9BA50077271861FD002CB3FC /* Attribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA500682718556B002CB3FC /* Attribute.swift */; };
 		9BA50078271861FD002CB3FC /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA50063271853B3002CB3FC /* Version.swift */; };
 		9BD940F5271C7C4A00AC3D9A /* FirebaseImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD940F4271C7C4900AC3D9A /* FirebaseImage.swift */; };
+		9BD94107271DAA3000AC3D9A /* AttributeDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD94106271DAA3000AC3D9A /* AttributeDetails.swift */; };
+		9BD94108271DAA3000AC3D9A /* AttributeDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD94106271DAA3000AC3D9A /* AttributeDetails.swift */; };
+		9BD94109271DAA3000AC3D9A /* AttributeDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD94106271DAA3000AC3D9A /* AttributeDetails.swift */; };
+		9BD9410A271DAA3000AC3D9A /* AttributeDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD94106271DAA3000AC3D9A /* AttributeDetails.swift */; };
+		9BD9410C271DAA6000AC3D9A /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD9410B271DAA6000AC3D9A /* ColorExtension.swift */; };
+		9BD9410D271DAA6000AC3D9A /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD9410B271DAA6000AC3D9A /* ColorExtension.swift */; };
+		9BD9410E271DAA6000AC3D9A /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD9410B271DAA6000AC3D9A /* ColorExtension.swift */; };
+		9BD9410F271DAA6000AC3D9A /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD9410B271DAA6000AC3D9A /* ColorExtension.swift */; };
+		9BD94111271DAA8B00AC3D9A /* DetailDismisser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD94110271DAA8B00AC3D9A /* DetailDismisser.swift */; };
+		9BD94112271DAA8B00AC3D9A /* DetailDismisser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD94110271DAA8B00AC3D9A /* DetailDismisser.swift */; };
+		9BD94113271DAA8B00AC3D9A /* DetailDismisser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD94110271DAA8B00AC3D9A /* DetailDismisser.swift */; };
+		9BD94114271DAA8B00AC3D9A /* DetailDismisser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD94110271DAA8B00AC3D9A /* DetailDismisser.swift */; };
+		9BD94116271DAB6000AC3D9A /* DetailBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD94115271DAB5F00AC3D9A /* DetailBackground.swift */; };
+		9BD94117271DAB6000AC3D9A /* DetailBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD94115271DAB5F00AC3D9A /* DetailBackground.swift */; };
+		9BD94118271DAB6000AC3D9A /* DetailBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD94115271DAB5F00AC3D9A /* DetailBackground.swift */; };
+		9BD94119271DAB6000AC3D9A /* DetailBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD94115271DAB5F00AC3D9A /* DetailBackground.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -130,6 +146,10 @@
 		9BA50065271853E5002CB3FC /* Fallout4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fallout4.swift; sourceTree = "<group>"; };
 		9BA500682718556B002CB3FC /* Attribute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attribute.swift; sourceTree = "<group>"; };
 		9BD940F4271C7C4900AC3D9A /* FirebaseImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseImage.swift; sourceTree = "<group>"; };
+		9BD94106271DAA3000AC3D9A /* AttributeDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AttributeDetails.swift; path = Shared/View/AttributeDetails.swift; sourceTree = SOURCE_ROOT; };
+		9BD9410B271DAA6000AC3D9A /* ColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		9BD94110271DAA8B00AC3D9A /* DetailDismisser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDismisser.swift; sourceTree = "<group>"; };
+		9BD94115271DAB5F00AC3D9A /* DetailBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailBackground.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +230,7 @@
 			isa = PBXGroup;
 			children = (
 				9B17D06E2719AB7A00879F7D /* ArrayExtension.swift */,
+				9BD9410B271DAA6000AC3D9A /* ColorExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -227,7 +248,10 @@
 			children = (
 				9BD94104271DA80100AC3D9A /* Cell */,
 				9B17D078271A687400879F7D /* Representable */,
+				9BD9411A271DAB6700AC3D9A /* Shape */,
+				9BD94106271DAA3000AC3D9A /* AttributeDetails.swift */,
 				9BA50022271850EE002CB3FC /* ContentView.swift */,
+				9BD94110271DAA8B00AC3D9A /* DetailDismisser.swift */,
 				9BD940F4271C7C4900AC3D9A /* FirebaseImage.swift */,
 				9B17D073271A627A00879F7D /* PerkChart.swift */,
 			);
@@ -328,6 +352,14 @@
 				9B2B715D27186CDF009FA0FC /* PerkCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		9BD9411A271DAB6700AC3D9A /* Shape */ = {
+			isa = PBXGroup;
+			children = (
+				9BD94115271DAB5F00AC3D9A /* DetailBackground.swift */,
+			);
+			path = Shape;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -509,10 +541,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				9BA50066271853E5002CB3FC /* Fallout4.swift in Sources */,
+				9BD94107271DAA3000AC3D9A /* AttributeDetails.swift in Sources */,
 				9BA5006027185233002CB3FC /* Character.swift in Sources */,
 				9BD940F5271C7C4A00AC3D9A /* FirebaseImage.swift in Sources */,
 				9B17D06F2719AB7A00879F7D /* ArrayExtension.swift in Sources */,
 				9B17D0692719A65200879F7D /* ImportService.swift in Sources */,
+				9BD94111271DAA8B00AC3D9A /* DetailDismisser.swift in Sources */,
+				9BD94116271DAB6000AC3D9A /* DetailBackground.swift in Sources */,
 				9B17D07A271A688100879F7D /* DocumentPicker.swift in Sources */,
 				9B17D0502718E3CB00879F7D /* FirebaseService.swift in Sources */,
 				9B17D05D2718F41300879F7D /* DataService.swift in Sources */,
@@ -525,6 +560,7 @@
 				9B17D074271A627A00879F7D /* PerkChart.swift in Sources */,
 				9BA5004A271850F0002CB3FC /* you_are_specialApp.swift in Sources */,
 				9BA500622718523A002CB3FC /* Perk.swift in Sources */,
+				9BD9410C271DAA6000AC3D9A /* ColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -533,10 +569,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				9BA5006D271861FC002CB3FC /* Attribute.swift in Sources */,
+				9BD94112271DAA8B00AC3D9A /* DetailDismisser.swift in Sources */,
 				9B17D05E2718F41300879F7D /* DataService.swift in Sources */,
 				9B17D0702719AB7A00879F7D /* ArrayExtension.swift in Sources */,
+				9BD94117271DAB6000AC3D9A /* DetailBackground.swift in Sources */,
 				9BA5006C271861FC002CB3FC /* Fallout4.swift in Sources */,
 				9B17D07B271A688100879F7D /* DocumentPicker.swift in Sources */,
+				9BD9410D271DAA6000AC3D9A /* ColorExtension.swift in Sources */,
 				9BA5004B271850F0002CB3FC /* you_are_specialApp.swift in Sources */,
 				9B17D06A2719A65200879F7D /* ImportService.swift in Sources */,
 				9B17D075271A627B00879F7D /* PerkChart.swift in Sources */,
@@ -544,6 +583,7 @@
 				9BA5006A271861FC002CB3FC /* Perk.swift in Sources */,
 				9BA5006B271861FC002CB3FC /* Character.swift in Sources */,
 				9B17D0642718F4AA00879F7D /* MainViewModel.swift in Sources */,
+				9BD94108271DAA3000AC3D9A /* AttributeDetails.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -552,10 +592,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				9BA50072271861FD002CB3FC /* Attribute.swift in Sources */,
+				9BD94113271DAA8B00AC3D9A /* DetailDismisser.swift in Sources */,
 				9B17D05F2718F41300879F7D /* DataService.swift in Sources */,
 				9B17D0712719AB7A00879F7D /* ArrayExtension.swift in Sources */,
+				9BD94118271DAB6000AC3D9A /* DetailBackground.swift in Sources */,
 				9BA50071271861FD002CB3FC /* Fallout4.swift in Sources */,
 				9B17D07C271A688100879F7D /* DocumentPicker.swift in Sources */,
+				9BD9410E271DAA6000AC3D9A /* ColorExtension.swift in Sources */,
 				9BA50070271861FD002CB3FC /* Character.swift in Sources */,
 				9B17D06B2719A65200879F7D /* ImportService.swift in Sources */,
 				9B17D076271A627B00879F7D /* PerkChart.swift in Sources */,
@@ -563,6 +606,7 @@
 				9BA50073271861FD002CB3FC /* Version.swift in Sources */,
 				9BA5006F271861FD002CB3FC /* Perk.swift in Sources */,
 				9B17D0652718F4AA00879F7D /* MainViewModel.swift in Sources */,
+				9BD94109271DAA3000AC3D9A /* AttributeDetails.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -571,10 +615,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				9BA50077271861FD002CB3FC /* Attribute.swift in Sources */,
+				9BD94114271DAA8B00AC3D9A /* DetailDismisser.swift in Sources */,
 				9B17D0602718F41300879F7D /* DataService.swift in Sources */,
 				9B17D0722719AB7A00879F7D /* ArrayExtension.swift in Sources */,
+				9BD94119271DAB6000AC3D9A /* DetailBackground.swift in Sources */,
 				9BA50076271861FD002CB3FC /* Fallout4.swift in Sources */,
 				9B17D07D271A688100879F7D /* DocumentPicker.swift in Sources */,
+				9BD9410F271DAA6000AC3D9A /* ColorExtension.swift in Sources */,
 				9BA50075271861FD002CB3FC /* Character.swift in Sources */,
 				9B17D06C2719A65300879F7D /* ImportService.swift in Sources */,
 				9B17D077271A627B00879F7D /* PerkChart.swift in Sources */,
@@ -582,6 +629,7 @@
 				9BA50078271861FD002CB3FC /* Version.swift in Sources */,
 				9BA50074271861FD002CB3FC /* Perk.swift in Sources */,
 				9B17D0662718F4AA00879F7D /* MainViewModel.swift in Sources */,
+				9BD9410A271DAA3000AC3D9A /* AttributeDetails.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

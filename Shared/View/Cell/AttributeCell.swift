@@ -9,6 +9,7 @@ import SwiftUI
 
 struct AttributeCell: View {
     let attribute: Attribute
+    @Binding var selected: Attribute?
     
     var body: some View {
         
@@ -28,7 +29,7 @@ struct AttributeCell: View {
                        minHeight: 35,
                        maxHeight: 50)
                 .onTapGesture {
-                    // Show dialog for attribute
+                    selected = attribute
                 }
             
         }
@@ -40,9 +41,7 @@ struct AttributeCell: View {
 
 struct AttributeCell_Previews: PreviewProvider {
     static var previews: some View {
-        AttributeCell(attribute: Attribute(
-            name: "Strength",
-            maxRank: 10,
-            version: "fo4"))
+        AttributeCell(attribute: Attribute(),
+                      selected: .constant(nil))
     }
 }

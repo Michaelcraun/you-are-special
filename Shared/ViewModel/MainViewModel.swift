@@ -17,6 +17,10 @@ class MainViewModel: ObservableObject {
     @Published var isPickingDocumentForImport = false
     @Published var isPresentingMenu = false
     
+    // MARK: - Data
+    @Published var selectedAttribute: Attribute?
+    @Published var shouldShowAttributeDetails: Bool = false
+    
     private func addFetched(version: Version) {
         DispatchQueue.main.async {
             self.version = version

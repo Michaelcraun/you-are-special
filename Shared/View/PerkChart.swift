@@ -9,6 +9,7 @@ import SwiftUI
 
 struct PerkChart: View {
     let chart: Version.PerkChart
+    @Binding var selectedAttribute: Attribute?
     
     var body: some View {
         
@@ -18,7 +19,7 @@ struct PerkChart: View {
                 
                 VStack {
                     
-                    AttributeCell(attribute: list.attribute)
+                    AttributeCell(attribute: list.attribute, selected: $selectedAttribute)
                     
                     ForEach(list.perks, id: \.name) { perk in
                         
@@ -39,6 +40,6 @@ struct PerkChart: View {
 
 struct PerkChartView_Previews: PreviewProvider {
     static var previews: some View {
-        PerkChart(chart: [])
+        PerkChart(chart: [], selectedAttribute: .constant(nil))
     }
 }

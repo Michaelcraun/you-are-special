@@ -7,11 +7,12 @@
 
 import Foundation
 
-class Attribute: Codable {
+class Attribute: Codable, Identifiable, Equatable {
     let maxRank: Int
     let name: String
     let version: String
     
+    var id: String { "\(version)-\(name)"}
     var rank: Int?
     
     var imagePaths: [String] {
@@ -28,6 +29,14 @@ class Attribute: Codable {
         self.maxRank = maxRank
         self.name = name
         self.version = version
+    }
+    
+    convenience init() {
+        self.init(name: "", maxRank: 0, version: "")
+    }
+    
+    static func == (lhs: Attribute, rhs: Attribute) -> Bool {
+        lhs.id == rhs.id
     }
 }
 

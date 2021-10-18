@@ -15,14 +15,27 @@ struct ContentView: View {
         
         NavigationView {
             
-            VStack(spacing: 0) {
+            ZStack {
                 
-                PerkChart(chart: viewModel.perkChart)
+                VStack(spacing: 0) {
+                    
+                    PerkChart(chart: viewModel.perkChart, selectedAttribute: $viewModel.selectedAttribute)
+                    
+                    Spacer()
+                    
+                }
+                .padding()
                 
-                Spacer()
+                ForEach(viewModel.version.attributes) { attribute in
+                    AttributeDetails(isShown: .init(
+                        get: {
+                            viewModel.selectedAttribute == attribute
+                        }, set: { newValue in
+                            viewModel.shouldShowAttributeDetails = newValue
+                        }))
+                }
                 
             }
-            .padding()
             .sheet(isPresented: $viewModel.isPickingDocumentForImport) {
                 DocumentPicker { location in
                     viewModel.importFileAt(location: location)
