@@ -17,6 +17,16 @@ class Perk: Codable {
     
     var rank: Int?
     
+    var description: String {
+        guard let progression = progression, let rank = rank else {
+            return ""
+        }
+        guard let first = progression.first(where: { $0.rank == rank + 1 }) else {
+            return ""
+        }
+        return first.description
+    }
+    var id: String { "\(version)-\(name)" }
     var imagePaths: [String] {
         if name.contains("/") {
             let perkNames = name.components(separatedBy: "/")
@@ -34,6 +44,10 @@ class Perk: Codable {
         self.requiredSpecial = requiredSpecial
         self.special = special
         self.version = version
+    }
+    
+    convenience init() {
+        self.init(special: .agility, requiredSpecial: 0, name: "", version: "", maxRank: 0, progression: [])
     }
 }
 

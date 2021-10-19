@@ -39,6 +39,12 @@ struct ContentView: View {
                                 }
                             }))
                     
+                    ForEach(model.perks, id: \.perk.id) { model in
+                        
+                        // Add PerkDetails view here
+                        
+                    }
+                    
                 }
                 
             }

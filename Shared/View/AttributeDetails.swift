@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AttributeDetails: View {
-    @StateObject var viewModel: AttributeViewModel
+    @ObservedObject var viewModel: AttributeViewModel
     @Binding var isShown: Bool
     
     var body: some View {

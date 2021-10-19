@@ -106,6 +106,10 @@
 		9BD94127271ED7B500AC3D9A /* PerkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD94125271ED7B400AC3D9A /* PerkViewModel.swift */; };
 		9BD94128271ED7B500AC3D9A /* PerkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD94125271ED7B400AC3D9A /* PerkViewModel.swift */; };
 		9BD94129271ED7B500AC3D9A /* PerkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD94125271ED7B400AC3D9A /* PerkViewModel.swift */; };
+		9BD9412B271EEC4D00AC3D9A /* PerkDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD9412A271EEC4D00AC3D9A /* PerkDetails.swift */; };
+		9BD9412C271EEC4D00AC3D9A /* PerkDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD9412A271EEC4D00AC3D9A /* PerkDetails.swift */; };
+		9BD9412D271EEC4D00AC3D9A /* PerkDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD9412A271EEC4D00AC3D9A /* PerkDetails.swift */; };
+		9BD9412E271EEC4D00AC3D9A /* PerkDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD9412A271EEC4D00AC3D9A /* PerkDetails.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -165,6 +169,7 @@
 		9BD9411B271E498300AC3D9A /* AttributeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributeViewModel.swift; sourceTree = "<group>"; };
 		9BD94120271E4F9F00AC3D9A /* RankSelector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankSelector.swift; sourceTree = "<group>"; };
 		9BD94125271ED7B400AC3D9A /* PerkViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerkViewModel.swift; sourceTree = "<group>"; };
+		9BD9412A271EEC4D00AC3D9A /* PerkDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerkDetails.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -271,6 +276,7 @@
 				9BD94110271DAA8B00AC3D9A /* DetailDismisser.swift */,
 				9BD940F4271C7C4900AC3D9A /* FirebaseImage.swift */,
 				9B17D073271A627A00879F7D /* PerkChart.swift */,
+				9BD9412A271EEC4D00AC3D9A /* PerkDetails.swift */,
 				9BD94120271E4F9F00AC3D9A /* RankSelector.swift */,
 			);
 			path = View;
@@ -570,6 +576,7 @@
 				9BD94111271DAA8B00AC3D9A /* DetailDismisser.swift in Sources */,
 				9BD94116271DAB6000AC3D9A /* DetailBackground.swift in Sources */,
 				9B17D07A271A688100879F7D /* DocumentPicker.swift in Sources */,
+				9BD9412B271EEC4D00AC3D9A /* PerkDetails.swift in Sources */,
 				9B17D0502718E3CB00879F7D /* FirebaseService.swift in Sources */,
 				9B17D05D2718F41300879F7D /* DataService.swift in Sources */,
 				9BA50064271853B3002CB3FC /* Version.swift in Sources */,
@@ -601,6 +608,7 @@
 				9BA5004B271850F0002CB3FC /* you_are_specialApp.swift in Sources */,
 				9BD9411D271E498300AC3D9A /* AttributeViewModel.swift in Sources */,
 				9B17D06A2719A65200879F7D /* ImportService.swift in Sources */,
+				9BD9412C271EEC4D00AC3D9A /* PerkDetails.swift in Sources */,
 				9B17D075271A627B00879F7D /* PerkChart.swift in Sources */,
 				9BA5006E271861FC002CB3FC /* Version.swift in Sources */,
 				9BA5006A271861FC002CB3FC /* Perk.swift in Sources */,
@@ -627,6 +635,7 @@
 				9BA50070271861FD002CB3FC /* Character.swift in Sources */,
 				9BD9411E271E498300AC3D9A /* AttributeViewModel.swift in Sources */,
 				9B17D06B2719A65200879F7D /* ImportService.swift in Sources */,
+				9BD9412D271EEC4D00AC3D9A /* PerkDetails.swift in Sources */,
 				9B17D076271A627B00879F7D /* PerkChart.swift in Sources */,
 				9BA5003D271850F0002CB3FC /* Tests_iOS.swift in Sources */,
 				9BA50073271861FD002CB3FC /* Version.swift in Sources */,
@@ -653,6 +662,7 @@
 				9BA50075271861FD002CB3FC /* Character.swift in Sources */,
 				9BD9411F271E498300AC3D9A /* AttributeViewModel.swift in Sources */,
 				9B17D06C2719A65300879F7D /* ImportService.swift in Sources */,
+				9BD9412E271EEC4D00AC3D9A /* PerkDetails.swift in Sources */,
 				9B17D077271A627B00879F7D /* PerkChart.swift in Sources */,
 				9BA50048271850F0002CB3FC /* Tests_macOS.swift in Sources */,
 				9BA50078271861FD002CB3FC /* Version.swift in Sources */,

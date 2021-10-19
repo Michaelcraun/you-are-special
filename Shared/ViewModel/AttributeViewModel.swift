@@ -28,11 +28,15 @@ class AttributeViewModel: ObservableObject {
             .sorted(by: { $0.requiredSpecial < $1.requiredSpecial })
             .map { PerkViewModel(perk: $0) }
         
-        self._rank = Binding<Int>.init(
+        self._rank = .init(get: { Int.random(in: 11...20) }, set: { _ in })
+        self._rank = .init(
             get: {
-                return attribute.rank ?? 0
+                print("rank is currently", self.attribute.rank ?? 0)
+                return self.attribute.rank ?? 0
             }, set: { newValue in
-                attribute.rank = newValue
+                print("setting", newValue, "for", self.name)
+                self.attribute.rank = newValue
+                print(self.name, "is now", self.attribute.rank ?? 0)
             })
     }
 }

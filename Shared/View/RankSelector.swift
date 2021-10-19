@@ -8,6 +8,13 @@
 import SwiftUI
 
 struct RankSelector: View {
+    
+    class RankDetails: ObservableObject {
+        @State var rank: Int
+        let max: Int
+        
+        
+    }
     @Binding var rank: Int
     let max: Int
     
@@ -16,10 +23,7 @@ struct RankSelector: View {
         VStack {
             
             Button {
-                if rank < max {
-                    print("increasing rank to \(rank + 1)")
-                    rank += 1
-                }
+                if rank < max { rank = rank + 1 }
             } label: {
                 Image(systemName: "chevron.up")
                     .padding()
@@ -27,18 +31,19 @@ struct RankSelector: View {
             
             Text("\(rank)")
                 .font(.largeTitle)
+                .frame(width: 50, height: 50)
                 .padding()
             
             Button {
-                if rank > 0 {
-                    print("decreasing rank to \(rank - 1)")
-                    rank -= 1
-                }
+                if rank > 0 { rank = rank - 1 }
             } label: {
                 Image(systemName: "chevron.down")
                     .padding()
             }
             
+        }
+        .onChange(of: rank) { newValue in
+            print(rank, "is now", newValue)
         }
         
     }
