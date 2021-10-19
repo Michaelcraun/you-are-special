@@ -12,6 +12,7 @@ class MainViewModel: ObservableObject {
     @Published var version: Version = Fallout4.game.version
     @Published var versions: [Version] = []
     @Published var perkChart: Version.PerkChart = Fallout4.game.version.perkChart()
+    @Published var attributeModels: [AttributeViewModel] = []
     
     // MARK: - Presentation
     @Published var isPickingDocumentForImport = false
@@ -25,6 +26,8 @@ class MainViewModel: ObservableObject {
         DispatchQueue.main.async {
             self.version = version
             self.perkChart = version.perkChart()
+            self.attributeModels = version.attributes
+                .map({ AttributeViewModel(attribute: $0, perks: version.perks) })
             
             if !self.versions.contains(version) {
                 self.versions.append(version)
@@ -51,6 +54,7 @@ class MainViewModel: ObservableObject {
     func setup() async {
         let versionID = DataService.shared.getValueFor(key: .version) ?? "fo4"
         let result = await Firebase.service.versionWith(id: versionID)
+        
         switch result {
         case .failure(let error):
             print("MainViewModel", #function, error.localizedDescription)

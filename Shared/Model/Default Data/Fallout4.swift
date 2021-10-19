@@ -12,13 +12,13 @@ struct Fallout4 {
     
     var version: Version
     private var attributes: [Attribute] {
-        [Attribute(name: "Strength", maxRank: 10, version: "fo4"),
-         Attribute(name: "Perception", maxRank: 10, version: "fo4"),
-         Attribute(name: "Endurance", maxRank: 10, version: "fo4"),
-         Attribute(name: "Charisma", maxRank: 10, version: "fo4"),
-         Attribute(name: "Intelligence", maxRank: 10, version: "fo4"),
-         Attribute(name: "Agility", maxRank: 10, version: "fo4"),
-         Attribute(name: "Luck", maxRank: 10, version: "fo4")]
+        [Attribute(name: "Strength", description: "", maxRank: 10, version: "fo4"),
+         Attribute(name: "Perception", description: "", maxRank: 10, version: "fo4"),
+         Attribute(name: "Endurance", description: "", maxRank: 10, version: "fo4"),
+         Attribute(name: "Charisma", description: "", maxRank: 10, version: "fo4"),
+         Attribute(name: "Intelligence", description: "", maxRank: 10, version: "fo4"),
+         Attribute(name: "Agility", description: "", maxRank: 10, version: "fo4"),
+         Attribute(name: "Luck", description: "", maxRank: 10, version: "fo4")]
     }
     private var perks: [Perk] {
         return [

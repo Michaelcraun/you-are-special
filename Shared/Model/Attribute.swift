@@ -8,11 +8,13 @@
 import Foundation
 
 class Attribute: Codable, Identifiable, Equatable {
+    var description: String
     let maxRank: Int
     let name: String
     let version: String
     
     var id: String { "\(version)-\(name)"}
+    var special: SPECIAL? { return SPECIAL(rawValue: name.lowercased()) }
     var rank: Int?
     
     var imagePaths: [String] {
@@ -25,14 +27,15 @@ class Attribute: Codable, Identifiable, Equatable {
     }
     var localImageName: String { name.lowercased() }
     
-    init(name: String, maxRank: Int, version: String) {
+    init(name: String, description: String, maxRank: Int, version: String) {
+        self.description = description
         self.maxRank = maxRank
         self.name = name
         self.version = version
     }
     
     convenience init() {
-        self.init(name: "", maxRank: 0, version: "")
+        self.init(name: "", description: "", maxRank: 0, version: "")
     }
     
     static func == (lhs: Attribute, rhs: Attribute) -> Bool {

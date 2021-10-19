@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+class PerkViewModel: ObservableObject {
+    @Published var perk: Perk
+    
+    init(perk: Perk) {
+        self.perk = perk
+    }
+}

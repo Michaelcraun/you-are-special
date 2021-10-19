@@ -17,6 +17,7 @@ struct RankSelector: View {
             
             Button {
                 if rank < max {
+                    print("increasing rank to \(rank + 1)")
                     rank += 1
                 }
             } label: {
@@ -30,6 +31,7 @@ struct RankSelector: View {
             
             Button {
                 if rank > 0 {
+                    print("decreasing rank to \(rank - 1)")
                     rank -= 1
                 }
             } label: {

@@ -8,22 +8,22 @@
 import SwiftUI
 
 struct PerkChart: View {
-    let chart: Version.PerkChart
+    let chart: [AttributeViewModel]
     @Binding var selectedAttribute: Attribute?
     
     var body: some View {
         
         HStack {
             
-            ForEach(chart, id: \.attribute.name) { list in
+            ForEach(chart, id: \.attribute.name) { model in
                 
                 VStack {
                     
-                    AttributeCell(attribute: list.attribute, selected: $selectedAttribute)
+                    AttributeCell(attribute: model.attribute, selected: $selectedAttribute)
                     
-                    ForEach(list.perks, id: \.name) { perk in
+                    ForEach(model.perks, id: \.perk.name) { model in
                         
-                        PerkCell(perk: perk)
+                        PerkCell(perk: model.perk)
                         
                     }
                     

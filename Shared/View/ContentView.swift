@@ -19,20 +19,26 @@ struct ContentView: View {
                 
                 VStack(spacing: 0) {
                     
-                    PerkChart(chart: viewModel.perkChart, selectedAttribute: $viewModel.selectedAttribute)
+                    PerkChart(chart: viewModel.attributeModels, selectedAttribute: $viewModel.selectedAttribute)
                     
                     Spacer()
                     
                 }
                 .padding()
                 
-                ForEach(viewModel.version.attributes) { attribute in
-                    AttributeDetails(isShown: .init(
-                        get: {
-                            viewModel.selectedAttribute == attribute
-                        }, set: { newValue in
-                            viewModel.shouldShowAttributeDetails = newValue
-                        }))
+                ForEach(viewModel.attributeModels, id: \.attribute.id) { model in
+                    
+                    AttributeDetails(
+                        viewModel: model,
+                        isShown: .init(
+                            get: {
+                                viewModel.selectedAttribute == model.attribute
+                            }, set: { newValue in
+                                if !newValue {
+                                    viewModel.selectedAttribute = nil
+                                }
+                            }))
+                    
                 }
                 
             }

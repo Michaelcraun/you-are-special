@@ -8,26 +8,30 @@
 import SwiftUI
 
 struct AttributeDetails: View {
+    @StateObject var viewModel: AttributeViewModel
     @Binding var isShown: Bool
     
     var body: some View {
         
         VStack(alignment: .leading) {
             
-//            Text(attribute.name)
+            Text(viewModel.name)
             
             HStack {
                 
-//                FirebaseImage(paths: attribute.imagePaths)
-//                    .scaledToFit()
-//                    .padding()
-//                    .frame(minWidth: 150, maxWidth: 200, minHeight: 150, maxHeight: 200)
+                FirebaseImage(paths: viewModel.imagePaths)
+                    .scaledToFit()
+                    .padding()
+                    .frame(minWidth: 150,
+                           maxWidth: 200,
+                           minHeight: 150,
+                           maxHeight: 200)
                 
-//                RankSelector(rank: $attribute.rank, max: attribute.maxRank)
+                RankSelector(rank: $viewModel.rank, max: viewModel.maxRank)
                 
             }
                 
-//            Text(attribute.description)
+            Text(viewModel.description)
             
         }
         .padding()
@@ -44,7 +48,7 @@ struct AttributeDetails: View {
 struct AttributeDetails_Previews: PreviewProvider {
     static var previews: some View {
         AttributeDetails(
-//            attribute: .constant(Attribute()),
+            viewModel: AttributeViewModel(attribute: Attribute(), perks: []),
             isShown: .constant(true))
     }
 }
