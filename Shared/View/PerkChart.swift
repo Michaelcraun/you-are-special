@@ -10,6 +10,7 @@ import SwiftUI
 struct PerkChart: View {
     let chart: [AttributeViewModel]
     @Binding var selectedAttribute: Attribute?
+    @Binding var selectedPerk: Perk?
     
     var body: some View {
         
@@ -23,7 +24,7 @@ struct PerkChart: View {
                     
                     ForEach(model.perks, id: \.perk.name) { model in
                         
-                        PerkCell(perk: model.perk)
+                        PerkCell(perk: model.perk, selected: $selectedPerk)
                         
                     }
                     
@@ -34,12 +35,25 @@ struct PerkChart: View {
             }
             
         }
+        .onChange(of: selectedAttribute) { newValue in
+            if newValue != nil {
+                selectedPerk = nil
+            }
+        }
+        .onChange(of: selectedPerk) { newValue in
+            if newValue != nil {
+                selectedAttribute = nil
+            }
+        }
         
     }
 }
 
 struct PerkChartView_Previews: PreviewProvider {
     static var previews: some View {
-        PerkChart(chart: [], selectedAttribute: .constant(nil))
+        PerkChart(
+            chart: [],
+            selectedAttribute: .constant(nil),
+            selectedPerk: .constant(nil))
     }
 }

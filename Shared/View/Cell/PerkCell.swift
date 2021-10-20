@@ -9,6 +9,7 @@ import SwiftUI
 
 struct PerkCell: View {
     let perk: Perk
+    @Binding var selected: Perk?
     
     var body: some View {
         
@@ -19,7 +20,7 @@ struct PerkCell: View {
                    minHeight: 35,
                    maxHeight: 50)
             .onTapGesture {
-                // show dialog for perk
+                selected = perk
             }
         
     }
@@ -27,6 +28,6 @@ struct PerkCell: View {
 
 struct PerkCell_Previews: PreviewProvider {
     static var previews: some View {
-        PerkCell(perk: Perk(special: .charisma, requiredSpecial: 4, name: "Animal Friend", version: "fo4", maxRank: 5, progression: []))
+        PerkCell(perk: Perk(), selected: .constant(nil))
     }
 }

@@ -19,7 +19,10 @@ struct ContentView: View {
                 
                 VStack(spacing: 0) {
                     
-                    PerkChart(chart: viewModel.attributeModels, selectedAttribute: $viewModel.selectedAttribute)
+                    PerkChart(
+                        chart: viewModel.attributeModels,
+                        selectedAttribute: $viewModel.selectedAttribute,
+                        selectedPerk: $viewModel.selectedPerk)
                     
                     Spacer()
                     
@@ -41,7 +44,16 @@ struct ContentView: View {
                     
                     ForEach(model.perks, id: \.perk.id) { model in
                         
-                        // Add PerkDetails view here
+                        PerkDetails(
+                            viewModel: model,
+                            isShown: .init(
+                                get: {
+                                    viewModel.selectedPerk == model.perk
+                                }, set: { newValue in
+                                    if !newValue {
+                                        viewModel.selectedPerk = nil
+                                    }
+                                }))
                         
                     }
                     

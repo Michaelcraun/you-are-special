@@ -12,7 +12,7 @@ class AttributeViewModel: ObservableObject {
     @Published var description: String
     @Published var name: String
     @Published var perks: [PerkViewModel]
-    @Binding var rank: Int
+    @Published var rank: Int
     
     var imagePaths: [String]
     var maxRank: Int
@@ -27,16 +27,16 @@ class AttributeViewModel: ObservableObject {
         self.perks = perks.filter({ $0.special == attribute.special })
             .sorted(by: { $0.requiredSpecial < $1.requiredSpecial })
             .map { PerkViewModel(perk: $0) }
-        
-        self._rank = .init(get: { Int.random(in: 11...20) }, set: { _ in })
-        self._rank = .init(
-            get: {
-                print("rank is currently", self.attribute.rank ?? 0)
-                return self.attribute.rank ?? 0
-            }, set: { newValue in
-                print("setting", newValue, "for", self.name)
-                self.attribute.rank = newValue
-                print(self.name, "is now", self.attribute.rank ?? 0)
-            })
+        self.rank = attribute.rank ?? 0
+//        self._rank = .init(get: { Int.random(in: 11...20) }, set: { _ in })
+//        self._rank = .init(
+//            get: {
+//                print("rank is currently", self.attribute.rank ?? 0)
+//                return self.attribute.rank ?? 0
+//            }, set: { newValue in
+//                print("setting", newValue, "for", self.name)
+//                self.attribute.rank = newValue
+//                print(self.name, "is now", self.attribute.rank ?? 0)
+//            })
     }
 }

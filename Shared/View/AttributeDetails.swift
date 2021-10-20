@@ -27,7 +27,8 @@ struct AttributeDetails: View {
                            minHeight: 150,
                            maxHeight: 200)
                 
-                RankSelector(rank: $viewModel.rank, max: viewModel.maxRank)
+//                RankSelector(model: .init(rank: $viewModel.rank, max: viewModel.maxRank))
+                RankSelector(model: .init(rank: viewModel.rank, max: viewModel.maxRank))
                 
             }
                 

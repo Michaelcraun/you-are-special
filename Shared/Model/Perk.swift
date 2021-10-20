@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Perk: Codable {
+class Perk: Codable, Equatable {
     let maxRank: Int
     let name: String
     let progression: [Progression]?
@@ -48,6 +48,10 @@ class Perk: Codable {
     
     convenience init() {
         self.init(special: .agility, requiredSpecial: 0, name: "", version: "", maxRank: 0, progression: [])
+    }
+    
+    static func == (lhs: Perk, rhs: Perk) -> Bool {
+        return lhs.id == rhs.id
     }
 }
 

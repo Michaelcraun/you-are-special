@@ -20,7 +20,7 @@ class MainViewModel: ObservableObject {
     
     // MARK: - Data
     @Published var selectedAttribute: Attribute?
-    @Published var shouldShowAttributeDetails: Bool = false
+    @Published var selectedPerk: Perk?
     
     private func addFetched(version: Version) {
         DispatchQueue.main.async {

@@ -9,17 +9,23 @@ import SwiftUI
 
 class PerkViewModel: ObservableObject {
     @Published var perk: Perk = Perk()
-    @Published var description: String
     @Published var name: String
     @Binding var rank: Int
     
+    var description: String {
+        guard let first = perk.progression?.first(where: { $0.rank == rank }) else { return "" }
+        return first.description
+    }
+    var descriptionForNextRank: String {
+        guard let first = perk.progression?.first(where: { $0.rank == rank + 1 }) else { return "" }
+        return first.description
+    }
     var imagePaths: [String]
     var maxRank: Int
     
     init(perk: Perk) {
         self.perk = perk
         
-        self.description = perk.description
         self.imagePaths = perk.imagePaths
         self.name = perk.name
         self.maxRank = perk.maxRank
@@ -29,7 +35,6 @@ class PerkViewModel: ObservableObject {
                 return self.perk.rank ?? 0
             }, set: { newValue in
                 self.perk.rank = newValue
-                self.description = self.perk.description
             })
     }
     
